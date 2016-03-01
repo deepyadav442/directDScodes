@@ -1,0 +1,45 @@
+Heap is binary tree in which
+every node has a value greater
+than its child nodes.
+
+A heap can be represented using
+an array also. In such a case
+for node n
+Its left child is at position : 2*n +1
+Its left child is at position : 2*n +2
+Its parent is at position : (n -1) /2
+
+Two imp operations on heap are
+Reheap up 
+===========
+  A nodes value is compared with
+  its parent node value
+  if child node value is greater then
+  child and parent are swapped.
+  The operation is continued as long as
+   child value remains greater.
+
+Reheap down
+=============
+  A parent node is compared with 
+  greater of its childs.
+  If parent node is smaller then 
+  they are swapped.
+   Repeat the same operation as 
+   long as the parent is smaller.
+ =============================
+
+Heap Sort Algo
+
+1) Accept array as input
+2)Perform reheap up for every element
+and convert the input array into heap
+3) Recall heap has root as the 
+largest value. Swap root (array[0])
+with last element of array.
+4) Consider array size as decremented
+by one.
+5) Perform reheap down on array[0]
+and remake the array as a heap.
+6) until array size becomes zero
+go to step 3
